@@ -168,7 +168,7 @@ class Game {
     }
     updateBolas() {
         console.clear();
-        this.bolas.length = 0;
+        // this.bolas.length = 0;
 
         const now = new Date();
         const minutes = now.getMinutes();
@@ -200,7 +200,7 @@ class Game {
     }
 }
 
-const game = new Game(61, 700, 700);
+const game = new Game(1000, 700, 700);
 
 const horario = document.querySelector("table");
 const time = document.querySelector("#time-display");

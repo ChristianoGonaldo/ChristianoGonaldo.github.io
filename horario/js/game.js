@@ -130,7 +130,7 @@ class Game {
     }
 
     gameLoop(canvas, ctx) {
-        ctx.clearRect(0, 0, canvas.width, canvas.height); // Limpiar el canvas
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         // Dibujar y mover todas las bolas
         for (const bola of this.bolas) {
@@ -139,7 +139,7 @@ class Game {
             bola.checkCollision(canvas.width, canvas.height);
         }
 
-        requestAnimationFrame(() => this.gameLoop(canvas, ctx)); // Animar el bucle
+        requestAnimationFrame(() => this.gameLoop(canvas, ctx));
     }
 
     init() {
@@ -160,15 +160,15 @@ class Game {
         // this.addBola();
     
         canvas.addEventListener('click', () => {
-            this.addBola(); // Crear una nueva bola al hacer clic
+            this.addBola();
         });
 
         this.startBolasUpdate();
-        this.gameLoop(canvas, ctx); // Iniciar el bucle de juego
+        this.gameLoop(canvas, ctx);
     }
     updateBolas() {
         console.clear();
-        // this.bolas.length = 0;
+        this.bolas.length = 0;
 
         const now = new Date();
         const minutes = now.getMinutes();

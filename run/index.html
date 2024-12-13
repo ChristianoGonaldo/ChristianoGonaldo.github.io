@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrera de Caballos</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Hípica</h1>
+    </header>
+    <main>
+        <div id="popup-overlay">
+            <div id="popup">
+                <label>¿Cuántos caballos? <input type="number" max="10" min="2" id="user-input"></label>
+                <br>
+                <button id="close-btn">Aceptar</button>
+            </div>
+        </div>
+    </main>
+
+    <button id="start" onclick="startRace()">¡Iniciar Carrera!</button>
+    <button id="setNames" onclick="setHorseNames()">Asignar Nombres</button>
+    <script src="js/script.js"></script>
+</body>
+
+</html> 

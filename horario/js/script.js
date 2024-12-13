@@ -28,7 +28,8 @@ let intervals = [];
             // IF PARA SI ES FIN DE SEMANA
             if (now.getDay() == 0 || now.getDay() == 6) {
                 document.querySelector("table").style.display = "none";
-                now.getDay() == 6 ? alert("Es sabado") : alert("Es domingo");
+                now.getDay() == 6 ? console.log("Es sabado") : console.log("Es domingo");
+                // now.getDay() == 6 ? alert("Es sabado") : alert("Es domingo");
                 return;
             }
 

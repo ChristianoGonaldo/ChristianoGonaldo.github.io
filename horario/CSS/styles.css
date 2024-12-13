@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(
+      45deg,
+      #ff7e5f,
+      #feb47b
+    ); /* Degradado diagonal de 45 grados */
+  }
+
+  /* Time display */
+  #time-display {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Table styles */
+  table {
+    border: 2;
+    border-color: black;
+    width: 90%;
+    border-collapse: collapse;
+    background-color: rgb(124, 31, 31);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  caption {
+    font-size: 2.5em;
+    margin: 10px 0;
+    color: #000000;
+  }
+
+  th,
+  td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+
+  th {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+
+  td {
+    background-color: #fff;
+  }
+
+  .highlight {
+    background-color: #47d912;
+    color: #000;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  }
+
+  /* Alert styles */
+  #alert {
+    display: none;
+    position: absolute;
+    top: 20px;
+    width: 80%;
+    text-align: center;
+    padding: 20px;
+    background-color: #ff5722;
+    color: #fff;
+    font-size: 2em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }

@@ -1,0 +1,143 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Table styles */
+table {
+    border: 2px solid black;
+    width: 90%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    z-index: 9999999;
+    background-color: #e5e5f7;
+   }
+
+caption {
+    font-size: 2.5em;
+    margin: 10px 0;
+    color: #ffffff;
+    user-select: none;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+    user-select: none;
+}
+
+td{
+    height: 40px;
+    font-size: 20px;
+}
+
+.hora {
+    color: #000000;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #ffffff;
+}
+
+.highlight {
+    background-color: #47d912;
+    color: #000;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    transition: background-color 3s ease;
+}
+
+.clase_highlight {
+    background-color: #ffeb3b;
+    color: #000;
+    font-weight: bold;
+    animation: palpitar 1.5s ease-in-out infinite, escala 1.5s ease-in-out infinite;
+}
+
+@keyframes palpitar {
+    0% {
+        background-color: rgba(255, 0, 0, 0.4); /* Rojo con opacidad baja */
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.4); /* Sombra suave */
+    }
+    50% {
+        background-color: rgba(255, 0, 0, 1); /* Rojo completamente opaco */
+        box-shadow: 0 0 20px rgba(255, 0, 0, 1); /* Sombra más grande y opaca */
+    }
+    100% {
+        background-color: rgba(255, 0, 0, 0.4); /* Regresa a opacidad baja */
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.4); /* Vuelve a sombra suave */
+    }
+}
+
+@keyframes escala {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.DWEC{user-select: none; background-color: rgb(80, 83, 212); font-weight: bold;}
+.DWES{user-select: none; background-color: antiquewhite; font-weight: bold;}
+.DAW{user-select: none; background-color: #867b19; font-weight: bold;}
+.DIW{user-select: none; background-color: #d6d6d6; font-weight: bold;}
+.EIE{user-select: none; background-color: rgb(208, 111, 15); font-weight: bold;}
+.RECREO{user-select: none; background-color: #ffeb3b; font-weight: bold;}
+
+.circle-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 30px; /* Tamaño del círculo */
+    height: 30px; /* Tamaño del círculo */
+    border-radius: 50%;
+    background-color: #ffffff;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.circle-btn::before {
+    content: var(--before-content, '🌞');
+    font-size: 24px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    line-height: 50px;
+}
+
+p{
+    color: #fff;
+    font-size: 6rem;
+}
+
+#time-display {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #fff;
+    background: linear-gradient(90deg, #1e90ff, #00bcd4);
+    padding: 15px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    user-select: none;
+}

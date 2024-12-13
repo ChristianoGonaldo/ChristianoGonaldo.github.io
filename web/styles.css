@@ -1,0 +1,312 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+.boxed{
+    width: 100%;
+    max-width: 1200px;
+    margin:auto;
+}
+body{
+    /* background: url(); */
+    /* background-size: cover; */
+    /* background-position: center; */
+    background-color: white;
+}
+
+img{
+    user-select: none;
+}
+
+header{
+    margin: 0 auto;
+}
+
+.logo-container a{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+.logo img{
+    width: 30%;
+    margin: 10px;
+}
+
+.profile div a, .carrito a {
+    margin: 0;
+}
+
+.profile{
+    position: absolute;
+    top: 2%;
+    right: 14%;
+
+    width: 130px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.profile svg {
+    width: 40px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+.profile .links a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+    width: 100%;
+}
+.profile .links a:hover {color: green;}
+
+.carrito{
+    position: absolute;
+    top: 2%;
+    right: 5%;
+}
+.carrito a{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    color: black;
+    text-decoration: none;
+}
+
+header nav div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header nav div a{
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0 10px 15px;
+    white-space: nowrap;
+    justify-content: center;
+    color: black;
+}
+
+header nav div a:visited{
+    color: gray;
+}
+
+nav div a:hover{
+    border-bottom: 1px solid blue;
+}
+
+header nav div{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main h1{
+    margin: 20px 0px;
+    border-bottom: 1px solid green;
+    font-size: 3rem;
+}
+
+main label{
+    padding-top: 10px;
+    color: green;
+}
+
+.contenedor{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 100px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+    
+}
+
+.contenedor div{
+    /* padding-bottom: 1%; */
+    /* border-bottom: 1px solid gray; */
+    padding-bottom: 10%;
+}
+
+/* .contenedor div:hover{
+    border-bottom: 1px solid gray;
+    padding-bottom: 10%;
+    transition: ease-in 1s;
+} */
+
+.contenedor div h2{
+    font-size: 15px;
+}
+
+.contenedor div p{
+    color: green;
+    margin-top: 10px;
+    margin-bottom: 20px;
+
+}
+.contenedor div span strong{
+    margin-top: 20px;
+    color: rgb(102, 102, 102);
+    font-size: 30px;
+}
+
+select {
+    padding: 10px 2px;
+}
+
+.buttons {
+    display: flex;
+    width: 100%;
+    
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+.buttons a {
+    width: 29%;
+    height: 50px;
+    text-transform: uppercase;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 30px;
+    background-color: rgb(199, 193, 193);
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 10px; 
+    padding-left: 10px;
+
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.buttons a:hover{
+    background-color: rgb(23, 146, 9);
+}
+
+.buttons a img{
+    height: 40px;
+    width: 40px;
+    overflow: hidden;
+    border-radius: 20%;
+    /* background-color: aqua; */
+}
+
+footer{
+    margin-top: 30px;
+}
+footer {
+    background-color: #333; 
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: #f1f1f1;
+}
+
+footer .copyright {
+    margin-top: 20px;
+}
+.redesSociales{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.redesSociales a svg{
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+footer .redesSociales a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    margin: 0 15px;
+    color: #fff;
+}
+
+footer .redesSociales a:hover {
+    color: #f1f1f1;
+}
+
+
+@media (max-width: 1070px) {
+    nav div {
+        flex-wrap: wrap;
+    }
+
+    .contenedor{
+        grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .profile svg,
+    .carrito svg {
+        width: 30px;
+        height: 30px;
+    }
+
+@media (max-width: 670px) {
+    main h1{
+        font-size: 1.5rem;
+    }
+    main p {
+       display: none;
+    }
+    .logo img{
+        width: 50%;
+    }
+    header nav div {
+        display: none;        
+    }
+
+    .icons>div {
+        display: flex;
+        justify-content: flex-end;
+        
+    }
+    .contenedor{
+        grid-template-columns: 1fr;
+    }   
+    
+    .profile, .carrito{
+        display: block;
+        position: relative;
+        display: flex;
+    }
+    .profile svg,
+    .carrito svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+}

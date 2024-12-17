@@ -159,6 +159,8 @@ let intervals = [];
 
         // Junto todas las funciones para no hacer demasiadas llamadas al setInterval
         function update() {
+            let gameContainer = document.getElementById("#game");
+            if(gameContainer) gameContainer.remove();
             day_highlight();
             hour_highlight();
             class_highlight();

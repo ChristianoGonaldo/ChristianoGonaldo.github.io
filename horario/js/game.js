@@ -130,7 +130,7 @@ class Game {
     }
 
     gameLoop(canvas, ctx) {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.clearRect(0, 0, canvas.width, canvas.height); // Limpiar el canvas
 
         // Dibujar y mover todas las bolas
         for (const bola of this.bolas) {
@@ -139,7 +139,7 @@ class Game {
             bola.checkCollision(canvas.width, canvas.height);
         }
 
-        requestAnimationFrame(() => this.gameLoop(canvas, ctx));
+        requestAnimationFrame(() => this.gameLoop(canvas, ctx)); // Animar el bucle
     }
 
     init() {
@@ -160,11 +160,11 @@ class Game {
         // this.addBola();
     
         canvas.addEventListener('click', () => {
-            this.addBola();
+            this.addBola(); // Crear una nueva bola al hacer clic
         });
 
         this.startBolasUpdate();
-        this.gameLoop(canvas, ctx);
+        this.gameLoop(canvas, ctx); // Iniciar el bucle de juego
     }
     updateBolas() {
         console.clear();
@@ -200,11 +200,10 @@ class Game {
     }
 }
 
-const game = new Game(1000, 700, 700);
+const game = new Game(61, 700, 700);
 
 const horario = document.querySelector("table");
 const time = document.querySelector("#time-display");
-let gameContainer = document.getElementById("#game");
 
 setTimeout(() => {
     const horarioStyle = window.getComputedStyle(horario);
@@ -215,12 +214,14 @@ setTimeout(() => {
         game.init();
         // dragon.style.display = "block";
         time.style.position = "static";
-    } else {
-        // console.log("Desactivar dragon, poner el reloj como absolute y quitar el juego")
-        time.style.position = "absolute";
-        // dragon.style.display = "block";
-        if(gameContainer) gameContainer.remove();
-    }
+    } 
+    // else {
+    //     console.log("Desactivar dragon, poner el reloj como absolute y quitar el juego");
+    //     // dragon.style.display = "block";
+    //     time.style.position = "absolute";
+    //     let gameContainer = document.getElementById("#game");
+    //     if(gameContainer) gameContainer.remove();
+    // }
 }, 100);
 
 function randomNumber(min, max) {

@@ -28,8 +28,7 @@ let intervals = [];
             // IF PARA SI ES FIN DE SEMANA
             if (now.getDay() == 0 || now.getDay() == 6) {
                 document.querySelector("table").style.display = "none";
-                now.getDay() == 6 ? console.log("Es sabado") : console.log("Es domingo");
-                // now.getDay() == 6 ? alert("Es sabado") : alert("Es domingo");
+                now.getDay() == 6 ? alert("Es sabado") : alert("Es domingo");
                 return;
             }
 
@@ -159,8 +158,6 @@ let intervals = [];
 
         // Junto todas las funciones para no hacer demasiadas llamadas al setInterval
         function update() {
-            let gameContainer = document.getElementById("#game");
-            if(gameContainer) gameContainer.remove();
             day_highlight();
             hour_highlight();
             class_highlight();
@@ -186,4 +183,15 @@ let intervals = [];
             getIntervals();
             update();
             timeUpdate();
+            
+            const displayStyle = document.querySelector('table');
+            // const dragon = document.querySelector("svg");
+                
+            if (displayStyle === 'block' || displayStyle === 'table') {
+                console.log("Desactivar dragon, poner el reloj como absolute y quitar el juego");
+                // dragon.style.display = "block";
+                time.style.position = "absolute";
+                let gameContainer = document.getElementById("#game");
+                if(gameContainer) gameContainer.remove();
+            }
         });
